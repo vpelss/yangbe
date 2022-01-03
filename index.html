@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<HTML> 
+  <HEAD> 
+	 <TITLE>Yangbe and Numerology Reading</TITLE> 
+  </HEAD> 
+  <BODY ONKEYUP="keyinput(event.keyCode);" BACKGROUND="images/3d.jpg"> <SCRIPT>
+var instructions = "Take the last stone.\nYou may take as many stones as you like from any single pile.\n\nClick on the stones to select or deselect them. Then use the Delete key or the Remove Stones button to complete your turn. \n\nIf you win, a Numerology reading is given derived from the path taken. Playing at a higher difficulty increases the accuracy of the outcome.";
+var maxrocks = 9; //max number of rocks per bowl
+var maxbowls = 10; //how many bowls can we do
+var varietyofrocks = 20; //rock images rock1.gif to rock20.gif 
+var delay = 2500; //simulated computer thinking time 
+var difficultyrange = 10; //from 0-10 10 is hardest 0 easiest	
+</SCRIPT> 
+	 <H3>The Ancient Game of Yangbe (
+		<IMG SRC="images/yangbe.gif" BORDER="0" WIDTH="50" HEIGHT="15"> )</H3> 
+	 <CENTER> 
+		<FORM> 
+		  <TABLE> 
+			 <TR> 
+				<TD><B>Your Name</B>:
+				  <INPUT TYPE="TEXT" NAME="visitor" ID="visitor"
+					ONCHANGE="var when = new Date();when.setTime (when.getTime() + (240 * 60 * 60 * 1000));setCookie('visitor', this.value , when);"></TD>
+				
+				<TD>&nbsp;&nbsp;<INPUT TYPE="BUTTON" NAME="Button1"
+				  VALUE="How do I play?" ONCLICK="alert(instructions)">&nbsp;&nbsp;</TD> 
+				<TD><B>Difficulty:</B> 
+				  <SELECT ID="difficulty"
+					ONCHANGE="var when = new Date();when.setTime (when.getTime() + (240 * 60 * 60 * 1000));setCookie('Difficulty', this.value , when);"
+					NAME="hj"> 
+					 <OPTION VALUE="1">1 - Child' Play</OPTION> 
+					 <OPTION VALUE="2">2</OPTION> 
+					 <OPTION VALUE="3">3</OPTION> 
+					 <OPTION VALUE="4">4</OPTION> 
+					 <OPTION VALUE="5" SELECTED="SELECTED">5</OPTION> 
+					 <OPTION VALUE="6">6</OPTION> 
+					 <OPTION VALUE="7">7</OPTION> 
+					 <OPTION VALUE="8">8</OPTION> 
+					 <OPTION VALUE="9">9</OPTION> 
+					 <OPTION VALUE="10">10 - Unbeatable</OPTION> 
+				  </SELECT></TD> 
+			 </TR> 
+		  </TABLE></FORM> 
+		<TABLE> 
+		  <TR> 
+			 <TD WIDTH="99%" VALIGN="MIDDLE"> 
+				<DIV ID="dummy"
+				STYLE="font-weight: bold; border-top: 1pt outset; border-right: 1pt outset; border-bottom: 1pt outset; border-left: 1pt outset">You
+				  go first.</DIV> </TD> 
+			 <TD VALIGN="MIDDLE" WIDTH="1%"> </TD> 
+		  </TR> 
+		</TABLE>
+		<FORM><INPUT TYPE="BUTTON" NAME="Button2" VALUE="Remove Stones"
+		  ONCLICK="keyinput(46);"></FORM><BR> 
+		<TABLE CELLSPACING="0" STYLE="display: inline"> 
+		  <TR> 
+			 <TD ALIGN="CENTER"><B>Body</B> <BR> 
+				<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="250"
+				HEIGHT="250" STYLE="display: inline" VALIGN="TOP"> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="43">
+						<IMG NAME="woodbowl0" SRC="images/woodbowl_1x1.gif" WIDTH="45" HEIGHT="43"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160" HEIGHT="43">
+						<IMG NAME="woodbowl1" SRC="images/woodbowl_1x2.gif" WIDTH="160" HEIGHT="43"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="43">
+						<IMG NAME="woodbowl2" SRC="images/woodbowl_1x3.gif" WIDTH="45" HEIGHT="43"
+						BORDER="0"></TD> 
+				  </TR> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="162">
+						<IMG NAME="woodbowl3" SRC="images/woodbowl_2x1.gif" WIDTH="45" HEIGHT="162"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160"
+					 HEIGHT="162" BACKGROUND="images/woodbowl_2x2.gif"> 
+						<DIV CLASS="bowl"></DIV> </TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="162">
+						<IMG NAME="images/woodbowl5" SRC="images/woodbowl_2x3.gif" WIDTH="45"
+						HEIGHT="162" BORDER="0"></TD> 
+				  </TR> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="45">
+						<IMG NAME="woodbowl6" SRC="images/woodbowl_3x1.gif" WIDTH="45" HEIGHT="45"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160" HEIGHT="45">
+						<IMG NAME="woodbowl7" SRC="images/woodbowl_3x2.gif" WIDTH="160" HEIGHT="45"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="45">
+						<IMG NAME="woodbowl8" SRC="images/woodbowl_3x3.gif" WIDTH="45" HEIGHT="45"
+						BORDER="0"></TD> 
+				  </TR> 
+				</TABLE></TD> 
+		  </TR> 
+		</TABLE> 
+		<TABLE CELLSPACING="0" STYLE="display: inline"> 
+		  <TR> 
+			 <TD ALIGN="CENTER"><B>Mind</B> <BR> 
+				<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="250"
+				HEIGHT="250" STYLE="display: inline" VALIGN="TOP"> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="43">
+						<IMG NAME="woodbowl0" SRC="images/woodbowl_1x1.gif" WIDTH="45" HEIGHT="43"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160" HEIGHT="43">
+						<IMG NAME="woodbowl1" SRC="images/woodbowl_1x2.gif" WIDTH="160" HEIGHT="43"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="43">
+						<IMG NAME="woodbowl2" SRC="images/woodbowl_1x3.gif" WIDTH="45" HEIGHT="43"
+						BORDER="0"></TD> 
+				  </TR> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="162">
+						<IMG NAME="woodbowl3" SRC="images/woodbowl_2x1.gif" WIDTH="45" HEIGHT="162"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160"
+					 HEIGHT="162" BACKGROUND="images/woodbowl_2x2.gif"> 
+						<DIV CLASS="bowl"></DIV> </TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="162">
+						<IMG NAME="images/woodbowl5" SRC="images/woodbowl_2x3.gif" WIDTH="45"
+						HEIGHT="162" BORDER="0"></TD> 
+				  </TR> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="45">
+						<IMG NAME="woodbowl6" SRC="images/woodbowl_3x1.gif" WIDTH="45" HEIGHT="45"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160" HEIGHT="45">
+						<IMG NAME="woodbowl7" SRC="images/woodbowl_3x2.gif" WIDTH="160" HEIGHT="45"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="45">
+						<IMG NAME="woodbowl8" SRC="images/woodbowl_3x3.gif" WIDTH="45" HEIGHT="45"
+						BORDER="0"></TD> 
+				  </TR> 
+				</TABLE></TD> 
+		  </TR> 
+		</TABLE> 
+		<TABLE CELLSPACING="0" STYLE="display: inline"> 
+		  <TR> 
+			 <TD ALIGN="CENTER"><B>Soul</B> <BR> 
+				<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="250"
+				HEIGHT="250" STYLE="display: inline" VALIGN="TOP"> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="43">
+						<IMG NAME="woodbowl0" SRC="images/woodbowl_1x1.gif" WIDTH="45" HEIGHT="43"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160" HEIGHT="43">
+						<IMG NAME="woodbowl1" SRC="images/woodbowl_1x2.gif" WIDTH="160" HEIGHT="43"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="43">
+						<IMG NAME="woodbowl2" SRC="images/woodbowl_1x3.gif" WIDTH="45" HEIGHT="43"
+						BORDER="0"></TD> 
+				  </TR> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="162">
+						<IMG NAME="woodbowl3" SRC="images/woodbowl_2x1.gif" WIDTH="45" HEIGHT="162"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160"
+					 HEIGHT="162" BACKGROUND="images/woodbowl_2x2.gif"> 
+						<DIV CLASS="bowl"></DIV> </TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="162">
+						<IMG NAME="images/woodbowl5" SRC="images/woodbowl_2x3.gif" WIDTH="45"
+						HEIGHT="162" BORDER="0"></TD> 
+				  </TR> 
+				  <TR> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="45">
+						<IMG NAME="woodbowl6" SRC="images/woodbowl_3x1.gif" WIDTH="45" HEIGHT="45"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="160" HEIGHT="45">
+						<IMG NAME="woodbowl7" SRC="images/woodbowl_3x2.gif" WIDTH="160" HEIGHT="45"
+						BORDER="0"></TD> 
+					 <TD ROWSPAN="1" COLSPAN="1" WIDTH="45" HEIGHT="45">
+						<IMG NAME="woodbowl8" SRC="images/woodbowl_3x3.gif" WIDTH="45" HEIGHT="45"
+						BORDER="0"></TD> 
+				  </TR> 
+				</TABLE></TD> 
+		  </TR> 
+		  <TR> 
+			 <TD ALIGN="CENTER"></TD> 
+		  </TR> 
+		</TABLE> </CENTER> <SCRIPT SRC="yangbe.js"></SCRIPT> <SCRIPT>
+document.getElementById('difficulty').value = getCookie('Difficulty') || '5';
+document.getElementById('visitor').value = getCookie('visitor') || '';
+</SCRIPT> </BODY>
+</HTML>
